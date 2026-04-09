@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Terminal, ChevronDown } from "lucide-react";
+import profileImg from "@/assets/profile.webp";
 
 export const HeroSection = () => {
   return (
