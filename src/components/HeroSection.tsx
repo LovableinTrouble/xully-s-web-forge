@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Terminal, ChevronDown } from "lucide-react";
+import profileImg from "@/assets/profile.webp";
 
 export const HeroSection = () => {
   return (
@@ -26,6 +27,17 @@ export const HeroSection = () => {
         >
           <Terminal className="w-3 h-3 text-primary" />
           <span>13 &bull; canada &bull; hacking stuff since 2021</span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-6"
+        >
+          <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-primary/30 shadow-[var(--glow-primary)]">
+            <img src={profileImg} alt="xullys" className="w-full h-full object-cover" />
+          </div>
         </motion.div>
 
         <motion.h1
