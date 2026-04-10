@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Braces, Code2, Atom, Palette, HardDrive, Crosshair, Snake, Wifi } from "lucide-react";
+import { Braces, Code2, Atom, Palette, HardDrive, Crosshair, Egg, Wifi } from "lucide-react";
 
 const skills = [
   { name: "JavaScript", level: 95, icon: Braces, accent: "from-yellow-400/80 to-yellow-600/80" },
@@ -8,7 +8,7 @@ const skills = [
   { name: "HTML / CSS", level: 90, icon: Palette, accent: "from-orange-400/80 to-pink-500/80" },
   { name: "Node.js", level: 75, icon: HardDrive, accent: "from-green-400/80 to-emerald-600/80" },
   { name: "Reverse Engineering", level: 80, icon: Crosshair, accent: "from-red-400/80 to-rose-600/80" },
-  { name: "Python", level: 60, icon: Snake, accent: "from-sky-400/80 to-indigo-500/80" },
+  { name: "Python", level: 60, icon: Egg, accent: "from-sky-400/80 to-indigo-500/80" },
   { name: "Networking / Proxies", level: 70, icon: Wifi, accent: "from-violet-400/80 to-purple-600/80" },
 ];
 
