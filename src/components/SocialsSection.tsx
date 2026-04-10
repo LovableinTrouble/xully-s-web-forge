@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Music, Users } from "lucide-react";
+import { Headset, Clapperboard, Crown } from "lucide-react";
 
 const socials = [
   {
-    icon: MessageCircle,
+    icon: Headset,
     label: "Discord",
     value: "xullysfr",
     link: "https://discord.com/users/xullysfr",
     color: "from-[#5865F2]/20 to-[#5865F2]/5",
   },
   {
-    icon: Music,
+    icon: Clapperboard,
     label: "TikTok",
     value: "@xullys_fn",
     link: "https://tiktok.com/@xullys_fn",
     color: "from-[#ff0050]/20 to-[#00f2ea]/5",
   },
   {
-    icon: Users,
+    icon: Crown,
     label: "Discord Server",
     value: "join the server",
     link: "https://discord.gg/ZrvQpbDF",

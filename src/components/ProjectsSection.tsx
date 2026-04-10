@@ -1,42 +1,47 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Gamepad2, Globe, FileCode, Server, Wrench } from "lucide-react";
+import { ExternalLink, Swords, Layout, ScrollText, ServerCog, ScanEye } from "lucide-react";
 
 const projects = [
   {
-    icon: Gamepad2,
+    icon: Swords,
     title: "X-Network",
     role: "Founder",
     desc: "this is my biggest project. its a huge cheating network for a ton of different games. i help develop the cheats and manage the whole thing. we have a pretty big community and its still growing which is sick",
     link: "https://x-network.lol",
     tags: ["Gaming", "Cheats", "Community"],
+    glow: "group-hover:shadow-[0_0_30px_hsl(270_100%_65%/0.15)]",
   },
   {
-    icon: Globe,
+    icon: Layout,
     title: "Web Development",
     role: "What I Do Most",
     desc: "i make websites for fun and sometimes for other people too. react + typescript is my go-to but i can do pretty much anything web related. i just like making things from scratch",
     tags: ["React", "TypeScript", "HTML/CSS"],
+    glow: "group-hover:shadow-[0_0_30px_hsl(200_100%_60%/0.15)]",
   },
   {
-    icon: FileCode,
+    icon: ScrollText,
     title: "Greasyfork Userscripts",
     role: "Author",
     desc: "i write userscripts that modify how websites work. some of them are just quality of life things, some are more advanced. its a fun way to hack the web without building a whole extension",
     tags: ["JavaScript", "Userscripts", "Tampermonkey"],
+    glow: "group-hover:shadow-[0_0_30px_hsl(40_100%_60%/0.15)]",
   },
   {
-    icon: Server,
+    icon: ServerCog,
     title: "Nebulo & Proxy Servers",
     role: "Contributor",
     desc: "i contribute to a bunch of open source proxy server projects including nebulo. proxy stuff is interesting because theres a lot of networking and problem solving involved",
     tags: ["Proxy", "Open Source", "Node.js"],
+    glow: "group-hover:shadow-[0_0_30px_hsl(150_100%_50%/0.15)]",
   },
   {
-    icon: Wrench,
+    icon: ScanEye,
     title: "Game Reverse Engineering",
     role: "For Fun",
     desc: "probably my favorite thing to do honestly. i take apart games to figure out how they work — looking at memory, protocols, binaries. its like solving a puzzle except the puzzle really doesnt want you to solve it",
     tags: ["RE", "Memory", "Game Hacking"],
+    glow: "group-hover:shadow-[0_0_30px_hsl(0_100%_60%/0.15)]",
   },
 ];
 
@@ -77,11 +82,11 @@ export const ProjectsSection = () => {
               viewport={{ once: true }}
               variants={itemVariants}
               whileHover={{ x: 6, transition: { duration: 0.2 } }}
-              className="border border-border rounded-xl p-6 bg-card hover:border-primary/40 hover:shadow-[var(--glow-primary)] transition-all duration-300 group cursor-default"
+              className={`border border-border rounded-xl p-6 bg-card hover:border-primary/40 transition-all duration-300 group cursor-default ${p.glow}`}
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 mt-0.5 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <p.icon className="w-4 h-4 text-primary" />
+                <div className="flex-shrink-0 mt-0.5 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all">
+                  <p.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1.5 flex-wrap">
@@ -103,7 +108,7 @@ export const ProjectsSection = () => {
                   <p className="text-xs text-muted-foreground leading-relaxed mb-3">{p.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {p.tags.map((t) => (
-                      <span key={t} className="text-[10px] text-muted-foreground bg-secondary rounded-full px-2 py-0.5">
+                      <span key={t} className="text-[10px] text-muted-foreground bg-secondary rounded-full px-2.5 py-0.5 border border-border/50">
                         {t}
                       </span>
                     ))}

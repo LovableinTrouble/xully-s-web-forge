@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Cpu, Globe } from "lucide-react";
+import { Sparkles, Bug, GitFork } from "lucide-react";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -13,9 +13,9 @@ const cardVariants = {
 
 export const AboutSection = () => {
   const items = [
-    { icon: Code, label: "Web Dev", desc: "i build websites and web apps mostly with react & typescript. its what i do the most tbh, i just really like making stuff look cool and work well" },
-    { icon: Cpu, label: "Game Hacking & RE", desc: "i love taking apart games to see how they work under the hood. finding exploits and understanding game internals is genuinely so fun to me" },
-    { icon: Globe, label: "Open Source", desc: "i contribute to proxy servers like nebulo and post userscripts on greasyfork. sharing code with people is cool and i learn a ton from it" },
+    { icon: Sparkles, label: "Web Dev", desc: "i build websites and web apps mostly with react & typescript. its what i do the most tbh, i just really like making stuff look cool and work well" },
+    { icon: Bug, label: "Game Hacking & RE", desc: "i love taking apart games to see how they work under the hood. finding exploits and understanding game internals is genuinely so fun to me" },
+    { icon: GitFork, label: "Open Source", desc: "i contribute to proxy servers like nebulo and post userscripts on greasyfork. sharing code with people is cool and i learn a ton from it" },
   ];
 
   return (
@@ -49,8 +49,8 @@ export const AboutSection = () => {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="border border-border rounded-xl p-6 bg-card hover:border-primary/40 hover:shadow-[var(--glow-primary)] transition-all duration-300 group cursor-default"
             >
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <item.icon className="w-4 h-4 text-primary" />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
+                <item.icon className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-heading text-sm font-semibold mb-2 text-foreground">{item.label}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
