@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
+import { FileCode2, FileType, Blocks, Paintbrush, Server, Shield, Terminal, Network } from "lucide-react";
 
 const skills = [
-  { name: "JavaScript", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "React", level: 85 },
-  { name: "HTML / CSS", level: 90 },
-  { name: "Node.js", level: 75 },
-  { name: "Reverse Engineering", level: 80 },
-  { name: "Python", level: 60 },
-  { name: "Networking / Proxies", level: 70 },
+  { name: "JavaScript", level: 95, icon: FileCode2 },
+  { name: "TypeScript", level: 90, icon: FileType },
+  { name: "React", level: 85, icon: Blocks },
+  { name: "HTML / CSS", level: 90, icon: Paintbrush },
+  { name: "Node.js", level: 75, icon: Server },
+  { name: "Reverse Engineering", level: 80, icon: Shield },
+  { name: "Python", level: 60, icon: Terminal },
+  { name: "Networking / Proxies", level: 70, icon: Network },
 ];
 
 export const SkillsSection = () => {
@@ -40,7 +41,10 @@ export const SkillsSection = () => {
               className="space-y-2"
             >
               <div className="flex justify-between text-xs">
-                <span className="text-foreground font-medium">{skill.name}</span>
+                <span className="text-foreground font-medium flex items-center gap-1.5">
+                  <skill.icon className="w-3 h-3 text-primary" />
+                  {skill.name}
+                </span>
                 <motion.span
                   className="text-muted-foreground tabular-nums"
                   initial={{ opacity: 0 }}

@@ -13,7 +13,7 @@ export const Navbar = () => {
           xullys<span className="animate-blink">_</span>
         </a>
         <div className="flex gap-6 text-xs uppercase tracking-widest">
-          {["about", "projects", "skills"].map((s, i) => (
+          {["about", "projects", "skills", "socials"].map((s, i) => (
             <motion.a
               key={s}
               href={`#${s}`}
